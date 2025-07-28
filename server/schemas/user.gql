@@ -1,0 +1,18 @@
+type Query {
+	getUsers: [User]
+	getUserById(id: ID!): User
+}
+
+type Mutation {
+	createUser(name: String!, age: Int!, isMarried: Boolean!): User
+	# modifyUser(user: User!)
+	# deleteUserById(id: ID!)
+	# ^ methods I may want to develop later
+}
+
+type User {
+	id: ID
+	name: String
+	age: Int
+	isMarried: Boolean
+}
