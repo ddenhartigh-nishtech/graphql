@@ -11,13 +11,3 @@ export const typeDefs = mergeTypeDefs(typesArray);
 
 const resolversArray = loadFilesSync(`${__dirname}/resolvers/**/*.js`);
 export const resolvers = mergeResolvers(resolversArray);
-
-// import { loadFilesSync } from "@graphql-tools/load-files";
-// import { mergeTypeDefs } from "@graphql-tools/merge";
-// import { mergeResolvers } from "@graphql-tools/merge";
-
-// const typesArray = loadFilesSync(`${__dirname}/schemas/**/*.gql`);
-// export const typeDefs = mergeTypeDefs(typesArray);
-
-// const resolversArray = loadFilesSync(`${__dirname}/resolvers/**/*.js`);
-// export const resolvers = mergeResolvers(resolversArray);
