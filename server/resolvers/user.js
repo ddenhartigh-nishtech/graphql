@@ -26,7 +26,9 @@ const userResolvers = {
 				age,
 				isMarried,
 			};
+			console.log("newUser", newUser);
 			users.push(newUser);
+			return newUser;
 		},
 	},
 };
