@@ -38,12 +38,10 @@ const CREATE_USER = gql`
 
 function App() {
 	const [newUser, setNewUser] = useState({
-		// name: "Gandalf the Grey",
 		name: "",
-		// age: 99,
 		age: "",
 		isMarried: false,
-	}); // this would be typed if I were working in tsx, but alas, jsx
+	});
 	// const [createUser] = useMutation(CREATE_USER);
 	// more advanced createUser that uses caching to ensure the new user renders w/o having to re-run the GET_USERS query - could cause false positives
 	// this is faster, but could result in false positives if the db operation failed
@@ -82,7 +80,7 @@ function App() {
 			isMarried: newUser.isMarried,
 		};
 		createUser({ variables });
-		// createUser({ variables, refetchQueries: [{ query: GET_USERS }] }); // retriggers GET_USERS on submit to pull in new data
+		// createUser({ variables, refetchQueries: [{ query: GET_USERS }] }); // retriggers GET_USERS on submit to pull in new data, alt is to change createUser definition
 	};
 
 	if (getUsersLoading || getUserByIdLoading) {
@@ -171,7 +169,6 @@ function App() {
 				</>
 			)}
 
-			{/* I could probably make a card component and recycle it here, but this is just for learning */}
 			{getUserByIdData && (
 				<>
 					<h1>User</h1>
