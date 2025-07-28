@@ -51,3 +51,33 @@ npm i @apollo/client graphql
 -   adding the form and function call to add a new user to my users data
 -   refactored it a bit so that the view updates on user creation
 -   made the inputs model newUser
+
+## How to run this locally?
+
+-   get the code
+
+```bash
+git clone https://github.com/ddenhartigh-nishtech/graphql
+cd graphql
+```
+
+### start the server (BE)
+
+-   create .env file at root, copy/paste .env.base --> .env (or just delete .base from it)
+
+```bash
+cd server
+node server.js
+```
+
+-   you should now have an server running at http://localhost:4000/
+-   you can use this to test out the resolvers / endpoints as well as generate gql queries for the application
+
+### start the application (FE)
+
+```bash
+cd client
+npm run dev
+```
+
+-   you should not have an app running at http://localhost:5173/ (port may vary, see terminal output)
